@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400&display=swap');
+@import 'node_modules/@tabler/icons/iconfont/tabler-icons.scss';
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --main-bg   : #1F1F3D;
+    --red       : #ED7B84;
+    --green     : #56A3A6;
+    --blue      : #8A74FD;
+    --lavender  : #A68FFF;
+}
+
+
+body, input, button {
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background-image: linear-gradient(to right, var(--lavender), var(--blue));
+    color: white;
+    transition: .3s;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    padding: 1.5rem;
+    color: white;
+}
+ 
+h1 {
+    text-shadow: 1px 1px 3px var(--main-bg);
+}
+
+.content {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.addBook {
+    margin: 1rem auto;
+    width: 3.3rem;
+    height: 3.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: var(--green);
+    background-color: var(--main-bg);
+    box-shadow: 0px 0px 4px rgb(13, 4, 39);
+}
+
+.floating-form {
+    position: absolute;
+    top: 0;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, .7);
+}
+
+.box {
+    width: 420px;
+    height: fit-content;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    padding: 3rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    background-color: var(--main-bg);
+    color: #fff;
+    box-shadow: 5px 7px 10px rgb(13, 4, 39);
+}
+
+.box h2 {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+
+.input-gradient-border {
+    margin-top: .3rem;
+    display: flex;
+    background-image: linear-gradient(to right, var(--lavender), var(--blue));
+    padding: 2px;
+    border-radius: .7rem;
+}
+
+
+.new-book {
+    display: flex;
+    width: 100%;
+    border: 0px;
+    border-radius: .6rem;
+    color: white;
+    background-color: var(--main-bg);
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: .7rem 1rem;
+}
+
+.input-inline {
+    flex-direction: row;
+    align-items: center;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+input[type='checkbox'] {
+    width: 20px;
+    height: 20px;
+    margin-right: .7rem;
+}
+
+.btn {
+    width: 300px;
+    padding: 1rem 1.5rem;
+    border: 0;
+    border-radius: 1rem;
+    background-image: linear-gradient(to right, var(--lavender), var(--blue));
+    color: white;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.btn:hover, .addBook:hover {
+    transform: scale(1.03);
+    transition: .3s;
+}
+
+.cancel {
+    margin-top: 1rem;
+    background-image: none;
+    background-color: var(--red);
+    color: var(--main-bg);
+}
+
+.bookList {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.bookItem-bg {
+    background-image: linear-gradient(to right, var(--lavender), var(--blue));
+    padding: .1rem;
+    border-radius: 1.05rem;
+    margin-bottom: .5rem;
+}
+
+.bookItem {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    padding: .5rem 1rem;
+    border-radius: 1rem;
+    background-color: var(--main-bg);
+}
+
+.bookText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.bookText h3 {
+    font-size: 1.4rem;
+}
+
+.bookDetail {
+    display: flex;
+    margin: .1rem 0;
+    font-weight: 300;
+    font-size: .8rem;
+}
+
+.bookDetail p {
+    margin-right: .3rem;
+}
+
+.action {
+    display: flex;
+    align-items: center;
+}
+.action button {
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1rem;
+    padding: .4rem;
+    margin: 0 .4rem;
+    color: white;
+}
+
+button {
+    border: none;
+}
+
+.belumBaca, .sudahBaca {
+    background-color: var(--green);
+}
+
+.hapus {
+    background-color: var(--red);
+}
+
+.edit {
+    background-color: var(--blue);
+}
+
+.belumBaca:hover, .sudahBaca:hover, .hapus:hover, .edit:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    transition: .3s;
+}
+
+#confirm-form input {
+    margin: 0 1rem;
+    padding: .7rem 1.3rem;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border-radius: 1rem;
+}
